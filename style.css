@@ -228,10 +228,25 @@ h3 {
 }
 
 .overview-list {
-  margin-top: 20px;
+  margin-top: 14px;
   list-style: none;
   display: grid;
-  gap: 10px;
+  gap: 9px;
+}
+
+.overview-panel {
+  background: linear-gradient(135deg, #152b47, #11233b);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.overview-wrap,
+.overview-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
 }
 
 .overview-list li {
@@ -253,6 +268,20 @@ h3 {
 
 .overview-action {
   margin-top: 22px;
+}
+
+.overview-image img {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+.overview-image {
+  display: grid;
+  gap: 14px;
 }
 
 .inline-head {
@@ -982,9 +1011,15 @@ thead th {
 
   .plan-grid,
   .location-grid,
+  .overview-wrap,
+  .overview-panel,
   .about-wrap,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .overview-image img {
+    min-height: 220px;
   }
 
   .amenity-grid {
